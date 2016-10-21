@@ -1,0 +1,25 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/argb_ffffffff"
+    >
+	<ScrollView 
+	    android:id="@+id/scrollView"
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:scrollbars="vertical"
+	    >
+	   	<TextView
+	        android:id="@+id/txt_content" 
+	        android:layout_width="match_parent"
+	        android:layout_height="match_parent"
+	        android:textColor="@color/argb_ff333333"
+	        android:padding="10dp"
+	        />
+	    
+	</ScrollView>
+
+ 	
+
+</RelativeLayout>
