@@ -34,6 +34,14 @@
         <activity android:name="com.example.administrator.myapplication.icompus.ui.life.BlogActivity" />
         <activity android:name="com.example.administrator.myapplication.icompus.ui.life.BlogDetailActivity" />
         <activity android:name=".ui.study.HomeWork"></activity>
+        <activity android:name=".ui.study.ClassEdit"></activity>
+
+            <receiver android:name=".MyReceiver">
+                <intent-filter>
+                    <action android:name="android.intent.action.PHONE_STATE">
+                    </action>
+                </intent-filter>
+            </receiver>
     </application>
 
     <uses-permission android:name="android.permission.INTERNET" />

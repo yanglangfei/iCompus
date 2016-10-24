@@ -94,6 +94,8 @@ public class MyDB {
 		public void onCreate(SQLiteDatabase db) {
 			db.execSQL(NoteTable.SQL_TABLE_CREATE);
 			db.execSQL(TimeLogTable.SQL_TABLE_CREATE);
+			db.execSQL(ClassTable.SQL_TABLE_CREATE);
+			Log.i("111","create。。。");
 		}
 		
 		@Override

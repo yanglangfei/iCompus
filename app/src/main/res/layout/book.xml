@@ -1,12 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
+                android:padding="10dp"
     android:background="@android:color/white">
+
     <TextView
-        android:id="@+id/tv_item"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="10dp"/>
+        android:id="@+id/tv_name"
+        android:text="课程名称：语文"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_name"
+        android:layout_marginTop="10dp"
+        android:id="@+id/tv_tName"
+        android:text="授课讲师:小胖子叫兽"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_tName"
+        android:layout_marginTop="10dp"
+        android:id="@+id/tv_start"
+        android:text="开始时间：10:30"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/tv_start"
+        android:layout_marginLeft="40dp"
+        android:id="@+id/tv_end"
+        android:layout_alignBottom="@+id/tv_start"
+        android:text="结束时间:12:30"/>
+
 
 </RelativeLayout>

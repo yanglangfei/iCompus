@@ -276,18 +276,18 @@ public class AppUtil {
 	}
 	/**
 	 * 格式化内容（用于博客内容及新闻内容）
-	 */	
-//	public static String FormatContent(Context context, String html){
-//		//是否图片模式
-//		boolean isImgMode=SettingActivity.IsPicReadMode(context);
-//		
-//		if(!isImgMode){
-//			html=AppUtil.ReplaceImgTag(html);
-//			html=AppUtil.ReplaceVideoTag(html);
-//		}
-//		
-//		return html;
-//	}
+	 *//*
+	public static String FormatContent(Context context, String html){
+		//是否图片模式
+		boolean isImgMode=SettingActivity.IsPicReadMode(context);
+
+		if(!isImgMode){
+			html=AppUtil.ReplaceImgTag(html);
+			html=AppUtil.ReplaceVideoTag(html);
+		}
+
+		return html;
+	}*/
 	static final Pattern patternHtml=Pattern.compile("<.+?>");
 	/**
 	 * 移除html标记

@@ -11,6 +11,7 @@ import org.xml.sax.XMLReader;
 import org.xml.sax.helpers.DefaultHandler;
 
 
+import android.content.Context;
 import android.util.Log;
 
 import com.example.administrator.myapplication.icompus.config.MyConfig;
@@ -159,24 +160,24 @@ public class BlogHelper extends DefaultHandler {
 	}
 	
 	
-//	public static String GetBlogById(int blogId, Context context) {
-//		String blogContent = "";
-//		
-//		BlogDalHelper helper = new BlogDalHelper(context);
-//		Blog entity = helper.GetBlogEntity(blogId);
-//		if (null == entity || entity.GetBlogContent().equals("")) {
-//			blogContent = GetBlogContentByIdWithNet(blogId);
-//			/*String _blogContent=ImageCacher.FormatLocalHtmlWithImg(ImageCacher.EnumImageType.Blog, blogContent);
-//			if (Config.IS_SYNCH2DB_AFTER_READ) {
-//				helper.SynchronyContent2DB(blogId, _blogContent);// ͬ������ݿ�
-//			}*/
-//		} else {
-//			blogContent = entity.GetBlogContent();
-//		}
-//
-//		return blogContent;
-//	}
+	/*public static String GetBlogById(int blogId, Context context) {
+		String blogContent = "";
 
+		BlogDalHelper helper = new BlogDalHelper(context);
+		Blog entity = helper.GetBlogEntity(blogId);
+		if (null == entity || entity.GetBlogContent().equals("")) {
+			blogContent = GetBlogContentByIdWithNet(blogId);
+			String _blogContent=ImageCacher.FormatLocalHtmlWithImg(ImageCacher.EnumImageType.Blog, blogContent);
+			if (Config.IS_SYNCH2DB_AFTER_READ) {
+				helper.SynchronyContent2DB(blogId, _blogContent);// ͬ������ݿ�
+			}
+		} else {
+			blogContent = entity.GetBlogContent();
+		}
+
+		return blogContent;
+	}
+*/
 
 	private static String ParseBlogString(String dataString) {
 		SAXParserFactory saxParserFactory = SAXParserFactory.newInstance();

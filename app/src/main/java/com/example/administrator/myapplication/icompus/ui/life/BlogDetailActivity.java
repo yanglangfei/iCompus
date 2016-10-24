@@ -77,7 +77,7 @@ public class BlogDetailActivity extends Activity {
 		mWebView = (WebView) findViewById(R.id.webview);
 		mWebView.addJavascriptInterface(this, "javatojs");
 		mWebView.setSelected(true);
-		mWebView.setScrollBarStyle(0);
+		mWebView.setScrollBarStyle(View.SCROLLBARS_INSIDE_INSET);
 		WebSettings setting = mWebView.getSettings();
 		setting.setJavaScriptEnabled(true);
 		setting.setNeedInitialFocus(false);
@@ -110,6 +110,7 @@ public class BlogDetailActivity extends Activity {
 		protected String doInBackground(String... params) {
 			
 			mContent = BlogHelper.GetBlog(mId);
+			Log.i("111","mContent:"+mContent);
 			
 			return mContent;
 		}
@@ -121,25 +122,7 @@ public class BlogDetailActivity extends Activity {
 	
 		@Override
 		protected void onPostExecute(String result) {
-			String htmlContent = "";
-			try {
-				InputStream in = getAssets().open("NewsDetail.html");
-				byte[] temp = NetHelper.readInputStream(in);
-				htmlContent = new String(temp);
-			} catch (Exception e) {
-				Log.e("error", e.toString());
-			}
-
-			String blogInfo = "作者: " + mAuthor + " 发表时间:" + mTime;
-			// 格式化html
-		/*_blogContent = AppUtil.FormatContent(getApplicationContext(),
-				_blogContent);*/
-
-			htmlContent = htmlContent.replace("#title#", mTitle)
-					.replace("#time#", blogInfo)
-					.replace("#content#", mContent);
-//			String htmlContent = AppUtil.FormatContent(getApplicationContext(),mContent);
-			mWebView.loadDataWithBaseURL("file:///android_asset/", htmlContent, "text/html", "utf-8", null);
+			mWebView.loadDataWithBaseURL(null, result, "text/html", "utf-8", null);
 		}
 		@Override
 		protected void onPreExecute() {
